@@ -6,9 +6,9 @@ namespace Tiagolopes\DesignPatterns\Entity\Tax;
 
 use Tiagolopes\DesignPatterns\Entity\Budget;
 
-class Icms implements TaxInterface
+class Icms extends Tax
 {
-    public function calculate(Budget $budget): float
+    public function calculateSpecificTax(Budget $budget): float
     {
         return $budget->value * 0.1;
     }

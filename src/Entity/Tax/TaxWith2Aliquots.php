@@ -6,9 +6,9 @@ namespace Tiagolopes\DesignPatterns\Entity\Tax;
 
 use Tiagolopes\DesignPatterns\Entity\Budget;
 
-abstract class TaxWith2Aliquots implements TaxInterface
+abstract class TaxWith2Aliquots extends Tax
 {
-    public function calculate(Budget $budget): float
+    public function calculateSpecificTax(Budget $budget): float
     {
         if ($this->shouldApplyMaxTax($budget)) {
             return $this->calculateMaxTax($budget);
