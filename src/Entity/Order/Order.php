@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Tiagolopes\DesignPatterns\Entity;
+namespace Tiagolopes\DesignPatterns\Entity\Order;
 
 use DateTimeImmutable;
+use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
 
 class Order
 {

@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-use Tiagolopes\DesignPatterns\Entity\{Budget, Order};
-use Tiagolopes\DesignPatterns\Reporter\{ExportedOrder, ZipExporter, XmlExporter};
+use Tiagolopes\DesignPatterns\Reporter\{ExportedOrder, XmlExporter, ZipExporter};
+use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
+use Tiagolopes\DesignPatterns\Entity\Order\Order;
 
 require __DIR__ . '/../vendor/autoload.php';
 

@@ -6,8 +6,8 @@ namespace Tiagolopes\DesignPatterns\Commands;
 
 use Tiagolopes\DesignPatterns\Actions\OrderActionInterface;
 use Tiagolopes\DesignPatterns\Dto\GenerateOrderDto;
-use Tiagolopes\DesignPatterns\Entity\Budget;
-use Tiagolopes\DesignPatterns\Entity\Order;
+use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
+use Tiagolopes\DesignPatterns\Entity\Order\Order;
 
 class GenerateOrderCommand implements CommandInterface
 {

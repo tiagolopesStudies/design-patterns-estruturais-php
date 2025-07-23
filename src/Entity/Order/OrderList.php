@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Tiagolopes\DesignPatterns\Entity;
+namespace Tiagolopes\DesignPatterns\Entity\Order;
 
 use ArrayIterator;
 use IteratorAggregate;

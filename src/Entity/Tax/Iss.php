@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tiagolopes\DesignPatterns\Entity\Tax;
 
-use Tiagolopes\DesignPatterns\Entity\Budget;
+use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
 
 class Iss extends Tax
 {

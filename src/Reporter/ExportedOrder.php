@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tiagolopes\DesignPatterns\Reporter;
 
-use Tiagolopes\DesignPatterns\Entity\Order;
+use Tiagolopes\DesignPatterns\Entity\Order\Order;
 
 readonly class ExportedOrder implements ExportedContent
 {

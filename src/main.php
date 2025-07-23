@@ -4,9 +4,10 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Tiagolopes\DesignPatterns\Entity\{Budget, Order, OrderList};
-use Tiagolopes\DesignPatterns\Entity\Tax\{Iptu, Iss, Icms};
+use Tiagolopes\DesignPatterns\Entity\Tax\{Icms, Iptu, Iss};
 use Tiagolopes\DesignPatterns\Services\{DiscountCalculator, TaxCalculator};
+use Tiagolopes\DesignPatterns\Entity\Budget\{Budget, BudgetList};
+use Tiagolopes\DesignPatterns\Entity\Order\{Order, OrderList};
 
 $budget             = new Budget(value: 1000, itemsCount: 6);
 $taxCalculator      = new TaxCalculator();
@@ -37,3 +38,12 @@ foreach ($orderList as $order) {
     echo "Items: {$order->budget->itemsCount}" . PHP_EOL;
     echo PHP_EOL;
 }
+
+$oldBudgetList = new BudgetList;
+$oldBudgetList->addItem($budget);
+
+$budgetList = new BudgetList;
+$budgetList->addItem($oldBudgetList);
+$budgetList->addItem($budget);
+
+echo $budgetList->value() . PHP_EOL;

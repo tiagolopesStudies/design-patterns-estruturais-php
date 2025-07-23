@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tiagolopes\DesignPatterns\Services;
 
-use Tiagolopes\DesignPatterns\Entity\Budget;
+use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
 use Tiagolopes\DesignPatterns\Entity\Tax\TaxInterface;
 
 class TaxCalculator

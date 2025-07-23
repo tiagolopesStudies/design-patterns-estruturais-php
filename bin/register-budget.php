@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 require __DIR__ . '/../vendor/autoload.php';
 
-use Tiagolopes\DesignPatterns\Entity\Budget;
-use Tiagolopes\DesignPatterns\Http\{CurlHttpAdapter, GuzzleHttpAdapter};
+use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
+use Tiagolopes\DesignPatterns\Http\{GuzzleHttpAdapter};
 use Tiagolopes\DesignPatterns\Services\BudgetRegister;
 
 if (count($argv) < 2 || count($argv) > 3) {

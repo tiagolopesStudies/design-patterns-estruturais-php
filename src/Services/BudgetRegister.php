@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tiagolopes\DesignPatterns\Services;
 
 use Exception;
-use Tiagolopes\DesignPatterns\Entity\Budget;
+use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
 use Tiagolopes\DesignPatterns\Entity\Status\Finalized;
 use Tiagolopes\DesignPatterns\Http\HttpAdapter;
 

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Tiagolopes\DesignPatterns\Entity;
+namespace Tiagolopes\DesignPatterns\Entity\Budget;
 
 use Tiagolopes\DesignPatterns\Entity\Status\BudgetState;
 use Tiagolopes\DesignPatterns\Entity\Status\Pending;
 
-class Budget
+class Budget implements Budgetable
 {
     public BudgetState $status;
     public function __construct(
@@ -35,5 +35,10 @@ class Budget
     public function finalize(): void
     {
         $this->status->finalize($this);
+    }
+
+    public function value(): float
+    {
+        return $this->value;
     }
 }

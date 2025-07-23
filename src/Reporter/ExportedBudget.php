@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Tiagolopes\DesignPatterns\Reporter;
 
-use Tiagolopes\DesignPatterns\Entity\Budget;
+use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
 
 readonly class ExportedBudget implements ExportedContent
 {

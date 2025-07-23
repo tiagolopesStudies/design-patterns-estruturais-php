@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Tiagolopes\DesignPatterns\Entity\Status;
 
 use DomainException;
-use Tiagolopes\DesignPatterns\Entity\Budget;
+use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
 
 abstract class BudgetState
 {
