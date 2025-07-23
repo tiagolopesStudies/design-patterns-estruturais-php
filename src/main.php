@@ -6,7 +6,8 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Tiagolopes\DesignPatterns\Entity\{Budget, Order, OrderList};
 use Tiagolopes\DesignPatterns\Entity\Tax\{Iptu, Iss};
-use Tiagolopes\DesignPatterns\Services\{DiscountCalculator, TaxCalculator};
+use Tiagolopes\DesignPatterns\Services\{BudgetRegister, DiscountCalculator, TaxCalculator};
+use Tiagolopes\DesignPatterns\Http\CurlHttpAdapter;
 
 $budget             = new Budget(value: 1000, itemsCount: 6);
 $taxCalculator      = new TaxCalculator();
@@ -34,3 +35,9 @@ foreach ($orderList as $order) {
     echo "Items: {$order->budget->itemsCount}" . PHP_EOL;
     echo PHP_EOL;
 }
+
+$budget->finalize();
+
+$budgetRegister = new BudgetRegister(new CurlHttpAdapter);
+$result = $budgetRegister->register($budget);
+print_r($result);
