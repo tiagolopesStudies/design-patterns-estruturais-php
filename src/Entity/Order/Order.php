@@ -9,10 +9,38 @@ use Tiagolopes\DesignPatterns\Entity\Budget\Budget;
 
 class Order
 {
-    public function __construct(
-        public string $clientName,
-        public Budget $budget,
-        public ?DateTimeImmutable $finalizedAt = null
-    ) {
+    private(set) OrderTemplate $template;
+    private(set) Budget $budget;
+
+    private function __construct()
+    {
+    }
+
+    public static function create(
+        string $clientName,
+        Budget $budget,
+        ?DateTimeImmutable $finalizedAt = null
+    ): self {
+        $instance = new self();
+
+        $instance->template = new OrderTemplate($clientName, $finalizedAt);
+        $instance->budget   = $budget;
+
+        return $instance;
+    }
+
+    public static function createFromTemplate(OrderTemplate $template, Budget $budget): self
+    {
+        $instance = new self();
+
+        $instance->template = $template;
+        $instance->budget   = $budget;
+
+        return $instance;
+    }
+
+    public function clientName(): string
+    {
+        return $this->template->clientName;
     }
 }

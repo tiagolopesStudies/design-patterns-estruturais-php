@@ -6,7 +6,7 @@ namespace Tiagolopes\DesignPatterns\Entity\Order;
 
 use DateTimeImmutable;
 
-readonly class OrderData
+readonly class OrderTemplate
 {
     public function __construct(
         public string $clientName,

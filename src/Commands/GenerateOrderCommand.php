@@ -28,7 +28,7 @@ class GenerateOrderCommand implements CommandInterface
     public function execute(): void
     {
         $budget = new Budget($this->generateOrderDto->value, $this->generateOrderDto->itemsCount);
-        $order  = new Order($this->generateOrderDto->clientName, $budget);
+        $order  = Order::create($this->generateOrderDto->clientName, $budget);
 
         $this->orderService->createOrder($this->generateOrderDto->clientName, $budget);
         $this->orderService->sendEmail($this->generateOrderDto->clientName);

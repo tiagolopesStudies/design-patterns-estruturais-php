@@ -27,7 +27,7 @@ $budget = new Budget(value: $budgetValue, itemsCount: $itemsCount);
 $budget->approve();
 $budget->finalize();
 
-$order = new Order(
+$order = Order::create(
     clientName: $clientName,
     budget: $budget,
     finalizedAt: new DateTimeImmutable()
