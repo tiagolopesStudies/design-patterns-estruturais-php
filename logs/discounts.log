@@ -1,0 +1,11 @@
+    =========================
+    2025-07-24 00:33:18
+    value: 1000
+    discount: 100
+    items_count: 6
+    status: Tiagolopes\DesignPatterns\Entity\Status\Pending    =========================
+    2025-07-24 00:37:36
+    value: 1000
+    discount: 100
+    items_count: 6
+    status: Tiagolopes\DesignPatterns\Entity\Status\Pending
