@@ -6,7 +6,7 @@ require __DIR__ . '/../vendor/autoload.php';
 
 use Tiagolopes\DesignPatterns\Entity\Tax\{Icms, Iptu, Iss};
 use Tiagolopes\DesignPatterns\Services\{DiscountCalculator, TaxCalculator};
-use Tiagolopes\DesignPatterns\Entity\Budget\{Budget, BudgetList};
+use Tiagolopes\DesignPatterns\Entity\Budget\{Budget, BudgetList, BudgetListCacheProxy};
 use Tiagolopes\DesignPatterns\Entity\Order\{Order, OrderList};
 
 $budget             = new Budget(value: 1000, itemsCount: 6);
@@ -46,4 +46,8 @@ $budgetList = new BudgetList;
 $budgetList->addItem($oldBudgetList);
 $budgetList->addItem($budget);
 
-echo $budgetList->value() . PHP_EOL;
+$cacheProxy = new BudgetListCacheProxy($budgetList);
+
+echo $cacheProxy->value() . PHP_EOL;
+echo $cacheProxy->value() . PHP_EOL;
+echo $cacheProxy->value() . PHP_EOL;

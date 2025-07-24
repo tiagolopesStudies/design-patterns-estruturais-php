@@ -21,6 +21,8 @@ class BudgetList implements Budgetable
 
     public function value(): float
     {
+        sleep(2); // simulates the response time of an API
+
         return array_reduce(
             array: $this->items,
             callback: fn (float $total, Budgetable $budget) => $total + $budget->value(),
